@@ -1,0 +1,40 @@
+# Python & Virtual Environments
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+# Large Model Weights & Checkpoints (downloaded at runtime or hosted externally)
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+*.onnx
+*.h5
+.cache/
+model/**/.cache/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+
+# Environment & Logs
+.env
+.env.local
+*.log
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.antigravity-ide/

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #030712;
+    --bg-surface: #070C18;
+    --bg-navy: #0D1527;
+    --bg-card: rgba(13, 21, 39, 0.75);
+    --primary-cyan: #00E5FF;
+    --cyber-blue: #2563EB;
+    --ai-sky: #38BDF8;
+    --real-emerald: #10B981;
+    --threat-red: #EF4444;
+    --amber-warning: #F59E0B;
+  }
+
+  body {
+    background-color: #030712;
+    color: #F1F5F9;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Custom Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030712;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0F172A;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00E5FF;
+  }
+}
+
+/* Cyber Grid Backgrounds */
+.cyber-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Glassmorphism Cyber Panels */
+.cyber-panel {
+  background: rgba(13, 21, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(0, 229, 255, 0.12);
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cyber-panel:hover {
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(0, 229, 255, 0.1);
+}
+
+.cyber-panel-threat {
+  background: rgba(26, 9, 14, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(239, 68, 68, 0.15), inset 0 1px 0 0 rgba(239, 68, 68, 0.25);
+  position: relative;
+}
+
+.cyber-panel-real {
+  background: rgba(6, 24, 18, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(16, 185, 129, 0.15), inset 0 1px 0 0 rgba(16, 185, 129, 0.25);
+  position: relative;
+}
+
+/* Corner Bracket Accents */
+.corner-brackets::before,
+.corner-brackets::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #00E5FF;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-brackets::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #00E5FF;
+  border-left: 2px solid #00E5FF;
+}
+
+.corner-brackets::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #00E5FF;
+  border-right: 2px solid #00E5FF;
+}
+
+.corner-brackets-red::before,
+.corner-brackets-red::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #EF4444;
+  pointer-events: none;
+  z-index: 10;
+}
+.corner-brackets-red::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #EF4444;
+  border-left: 2px solid #EF4444;
+}
+.corner-brackets-red::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #EF4444;
+  border-right: 2px solid #EF4444;
+}
+
+.corner-brackets-emerald::before,
+.corner-brackets-emerald::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #10B981;
+  pointer-events: none;
+  z-index: 10;
+}
+.corner-brackets-emerald::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #10B981;
+  border-left: 2px solid #10B981;
+}
+.corner-brackets-emerald::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #10B981;
+  border-right: 2px solid #10B981;
+}
+
+/* Glow Utilities */
+.glow-cyan {
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.7), 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.glow-red {
+  text-shadow: 0 0 16px rgba(239, 68, 68, 0.7), 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.glow-green {
+  text-shadow: 0 0 16px rgba(16, 185, 129, 0.7), 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.3), inset 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.3), inset 0 0 15px rgba(239, 68, 68, 0.1);
+}
+
+.box-glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.3), inset 0 0 15px rgba(16, 185, 129, 0.1);
+}
+
+/* Keyframes & Animations */
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes scan-vertical {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00E5FF 50%, transparent);
+  box-shadow: 0 0 18px #00E5FF, 0 0 30px #00E5FF;
+  animation: scan-vertical 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-cyan {
+  animation: pulse-cyan 3s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
